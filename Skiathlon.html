@@ -15,7 +15,11 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body>
-
+		<div id="frame-backdrop">
+			<div class="modal-img-container">
+				<img class="frame-clickable minimized-frame" src="images/frame.jpg" alt=""/>
+			</div>
+		</div>
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
@@ -92,7 +96,7 @@
 				<section id="concept">
 				<h3 class="major">Concepts Used</h3>
 				<h5>Creating a Frame</h5>
-				<p><span class="image right"><img src="images/frame.jpg" alt=""/></span>Following the diagram we have a Hsync and a Vsync variable that are run by counters that reset at 525 and 800, these values act as the location inside the frame. There is an active region which will be a simple logic variable that is true when Hsync and Vsync are between 0 and 480, and 0 to 640. Outisde the region is when RGB outputs should be set to 0. Testing the code would show subtle gray tint throughout the screen on the monitor.</p>
+				<p><span class="image right"><img class="frame-clickable" src="images/frame.jpg" alt=""/></span>Following the diagram we have a Hsync and a Vsync variable that are run by counters that reset at 525 and 800, these values act as the location inside the frame. There is an active region which will be a simple logic variable that is true when Hsync and Vsync are between 0 and 480, and 0 to 640. Outisde the region is when RGB outputs should be set to 0. Testing the code would show subtle gray tint throughout the screen on the monitor.</p>
 
 				<h5>State Machines</h5>
 				<p>The entire game is handled with two state machines. One named protocol.c that handles parsing and recording information of the received encrypted message. The other state machine, ArtificialAgent.c, handles the states of the entire game such as guessing coordinates or determining who goes first. The diagrams below describe the states and their conditions labeled in bold.</p>
@@ -163,6 +167,6 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+  			<script src="assets/js/skiathlon.js"></script>
 	</body>
 </html>
