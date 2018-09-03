@@ -3968,13 +3968,11 @@
 }
 
 .modal-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	height: 100vh;
 	z-index: 100000;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#frame-backdrop {
-
+	background-color: rgba(0,0,0,0.9);
 }
